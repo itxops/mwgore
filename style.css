@@ -1,6 +1,6 @@
 :root{
  --paper:#f5f1ea;--paper2:#ece6dc;--ink:#121212;--ink2:#1c1c1e;--muted:#6b665e;
- --red:#ff3b30;--red-d:#d92a20;--line:rgba(18,18,18,.12);
+ --red:#ff3b30;--red-d:#c8241b;--line:rgba(18,18,18,.12);
  --r:28px;--ease:cubic-bezier(.22,1,.36,1);
  --display:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;
  --body:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -46,8 +46,8 @@ h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
 .btn b{display:inline-block;transition:transform .3s var(--ease)}
 .btn:hover{transform:translateY(-3px)}
 .btn:hover b{transform:translateX(6px)}
-.btn-red{background:var(--red);color:#fff;box-shadow:0 14px 30px -12px rgba(255,59,48,.7)}
-.btn-red:hover{background:var(--red-d)}
+.btn-red{background:#d92a20;color:#fff;box-shadow:0 14px 30px -12px rgba(217,42,32,.65)}
+.btn-red:hover{background:#b81f17}
 .btn-ink{background:var(--ink);color:#fff}
 .btn-ink:hover{background:#2a2a2d}
 
@@ -77,7 +77,7 @@ h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
 .sticker{position:absolute;padding:12px 20px;border-radius:999px;font-weight:600;background:var(--ink);color:#fff;box-shadow:0 18px 36px -14px rgba(0,0,0,.5);transition:transform .25s ease-out;font-size:.95rem}
 .sticker b{color:var(--red)}
 .s1{left:-18px;top:30%;animation:bob 6s ease-in-out infinite}
-.s2{left:6%;bottom:6%;background:var(--red);animation:bob 7s ease-in-out infinite .8s}
+.s2{left:6%;bottom:6%;background:#d92a20;animation:bob 7s ease-in-out infinite .8s}
 
 .fine{color:var(--muted);font-size:.82rem;margin-top:28px;text-align:center}
 
@@ -132,7 +132,7 @@ h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
 .why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
 .why-photo{position:relative;border-radius:var(--r)}
 .why-photo img{aspect-ratio:4/5;width:100%;object-fit:cover;object-position:42% 50%;border-radius:var(--r);box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
-.stat{position:absolute;right:-22px;bottom:34px;background:var(--red);color:#fff;padding:20px 28px;border-radius:22px;box-shadow:0 22px 40px -16px rgba(255,59,48,.7);animation:bob 6s ease-in-out infinite}
+.stat{position:absolute;right:-22px;bottom:34px;background:#d92a20;color:#fff;padding:20px 28px;border-radius:22px;box-shadow:0 22px 40px -16px rgba(255,59,48,.7);animation:bob 6s ease-in-out infinite}
 .stat b{display:block;font-family:var(--display);font-size:3rem;line-height:1}
 .stat span{font-size:.85rem}
 .checks{display:grid;grid-template-columns:1fr 1fr;gap:26px 34px}
@@ -202,12 +202,6 @@ h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
  .why-photo{max-width:480px}.stat{right:10px}
 }
 @media(max-width:760px){
- .burger{display:block}
- .header{border-radius:28px;flex-wrap:wrap;padding:10px 12px 10px 18px}
- .header nav{display:none;order:3;width:100%;flex-direction:column;align-items:stretch;gap:2px;padding:10px 0 6px}
- .header nav.open{display:flex}
- .header nav a{padding:13px 14px;font-size:1.05rem}
- .header nav .nav-visit{margin:6px 0 0;text-align:center}
  .bento{grid-template-columns:1fr;grid-auto-rows:240px}
  .t-screen{grid-column:span 1;grid-row:span 1}
  .t-water,.t-battery,.t-audio,.t-signal,.t-soft{grid-column:span 1}
@@ -235,8 +229,6 @@ h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
 .brand-chip{display:flex;align-items:center;justify-content:center;gap:12px;min-width:176px;min-height:70px;flex:none;padding:14px 26px;margin-right:16px;border-radius:18px;border:1px solid var(--line);background:#fff;font-weight:700;font-size:1.05rem;color:var(--ink);transition:transform .25s var(--ease),border-color .25s,color .25s}
 .brand-chip svg{width:22px;height:22px;fill:currentColor;opacity:.85}
 .brand-chip:hover{transform:translateY(-3px);border-color:var(--red);color:var(--red-d)}
-.marquee-track{animation:slide 34s linear infinite!important}
-.marquee:hover .marquee-track{animation-play-state:paused!important}
 
 /* ---- phone polish ---- */
 .collage{width:100%}
@@ -327,3 +319,53 @@ h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
 @media(max-width:1000px){.foot-grid{grid-template-columns:1fr 1fr;gap:30px 24px}.foot-grid>:first-child,.foot-grid>:last-child{grid-column:1/-1}}
 @media(max-width:760px){.close{padding:64px 0}.foot{padding:48px 0 24px}.brand-chip{min-width:150px;padding:12px 20px}}
 .foot .f-icon{width:30px;height:30px;min-height:0;min-width:30px;padding:0;display:grid}
+
+/* ---- client-ready QA pass ---- */
+/* menu switches to the mobile pattern at 900px so tablets never get a cramped nav */
+@media(max-width:900px){
+ .burger{display:block}
+ .header{border-radius:28px;flex-wrap:wrap;padding:10px 12px 10px 18px}
+ .header nav{display:none;order:3;width:100%;flex-direction:column;align-items:stretch;gap:2px;padding:10px 0 6px}
+ .header nav.open{display:flex}
+ .header nav a{padding:13px 14px;font-size:1.05rem}
+ .header nav .nav-visit{margin:6px 0 0;text-align:center}
+}
+/* keyboard focus */
+:focus-visible{outline:3px solid #c8241b;outline-offset:3px;border-radius:6px}
+.sec-dark :focus-visible,.visit :focus-visible,.foot :focus-visible,.tile :focus-visible,.gear :focus-visible{outline-color:#ff9a92}
+.skip{position:fixed;left:12px;top:-60px;z-index:300;background:#121212;color:#fff;padding:12px 18px;border-radius:12px;font-weight:600;transition:top .2s}
+.skip:focus{top:12px}
+/* touch targets */
+.tile a{padding:10px 0}
+.tile:hover a,.tile:focus-within a{max-height:48px}
+.faq summary{min-height:56px}
+.visit-note{color:#cfc9be;margin:-14px 0 26px;max-width:420px}
+.faq details a{color:var(--red-d);text-decoration:underline;text-underline-offset:3px}
+/* reduced motion: no scrolling marquee — show the six brands as a tidy static row instead */
+@media(prefers-reduced-motion:reduce){
+ .marquee{-webkit-mask-image:none;mask-image:none}
+ .marquee-track{animation:none!important;width:auto;flex-wrap:wrap;justify-content:center;padding:0 4% 22px;row-gap:12px}
+ .marquee-track>[data-clone]{display:none}
+}
+.logo{display:flex;align-items:center;min-height:44px}
+
+/* ---- small-phone fixes ---- */
+@media(max-width:1000px){
+ .tile::after{background:linear-gradient(180deg,rgba(10,10,10,.38) 0%,rgba(10,10,10,.9) 100%)}
+}
+@media(max-width:760px){
+ .bento{grid-auto-rows:auto}
+ .tile{min-height:250px;display:flex;align-items:flex-end}
+ .tile-body{position:relative;inset:auto;width:100%}
+}
+@media(max-width:420px){
+ .header{width:calc(100% - 20px);padding:8px 10px 8px 14px}
+ .logo img{height:27px}
+ .sec-head.center h2 br{display:none}
+ .hero h1{font-size:clamp(2.2rem,10.4vw,2.7rem)}
+ .kicker{font-size:.78rem;padding:7px 12px}
+}
+@media(max-width:760px) and (prefers-reduced-motion:reduce){
+ .brand-chip{min-width:0;flex:0 1 calc(50% - 22px);margin-right:0;padding:12px 14px}
+ .marquee-track{gap:12px}
+}
