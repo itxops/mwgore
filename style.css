@@ -347,3 +347,76 @@ h1,h2,h3{font-weight:600;letter-spacing:-.03em;line-height:1.07;text-wrap:balanc
 }
 .statement::before{background:linear-gradient(180deg,rgba(10,10,12,.8),rgba(10,10,12,.76))}
 .statement h2 span{color:#d1d1d6}
+
+/* repairs we handle every day — with controlled photos */
+.problems-img li{padding:0 0 30px;border-top:0;border-radius:0}
+.problems-img li:hover{background:transparent;box-shadow:none}
+.problems-img{row-gap:44px}
+.problems-img img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:18px;background:#e8e8ed;transition:transform .6s var(--ease)}
+.problems-img li{overflow:visible}
+.problems-img li:hover img{transform:scale(1.02)}
+.problems-img .pb{border-top:1px solid var(--ink);margin-top:22px;padding-top:18px;display:grid;grid-template-columns:auto 1fr;column-gap:16px;align-items:baseline}
+.problems-img .no{font-size:1rem;margin:0;color:var(--red-ink);grid-row:span 2}
+.problems-img li:hover .no{color:var(--red)}
+.problems-img h3{font-size:1.4375rem;margin-bottom:6px}
+@media(max-width:700px){
+ .problems-img{row-gap:0}
+ .problems-img li{display:grid;grid-template-columns:96px 1fr;column-gap:16px;align-items:center;padding:18px 0;border-top:1px solid var(--line)}
+ .problems-img li:last-child{border-bottom:1px solid var(--line)}
+ .problems-img img{width:96px;height:96px;aspect-ratio:1;border-radius:14px}
+ .problems-img .pb{border-top:0;margin:0;padding:0;grid-template-columns:1fr}
+ .problems-img .no{grid-row:auto;font-size:.8125rem;margin-bottom:2px}
+ .problems-img h3{font-size:1.1875rem;margin-bottom:2px}
+ .problems-img p{font-size:.9375rem}
+}
+
+/* ===== imagery pass ===== */
+picture{display:contents}
+
+/* hero: contained rounded panel, photo inside, text on the photo */
+.hero{background:#fff;color:#fff;min-height:0;display:block;overflow:visible;isolation:auto;padding:calc(52px + 20px) 0 clamp(24px,4vw,44px)}
+.hero::before{display:none}
+.hero-panel{position:relative;isolation:isolate;overflow:hidden;border-radius:28px;background:#111;min-height:clamp(520px,64vh,640px);display:flex;align-items:center;padding:clamp(40px,6vw,76px)}
+.hero-panel::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,8,10,.86) 0%,rgba(8,8,10,.68) 40%,rgba(8,8,10,.24) 76%,rgba(8,8,10,.1) 100%)}
+.hero-bg{z-index:-2}
+.hero-text{max-width:600px}
+
+/* statement + closing CTA: typography only (no full-bleed photos) */
+.statement{background:#fff;color:var(--ink)}
+.statement::before{display:none}
+.statement h2{color:var(--ink)}
+.statement h2 span{color:#86868b}
+.statement .big{color:var(--mut)}
+.statement .more{color:var(--red-ink)}
+.statement :focus-visible{outline-color:var(--red-ink)}
+.cta{background:var(--dark)}
+.cta::before{display:none}
+
+/* what we repair: subtle device icons */
+.device h3{display:flex;align-items:center;gap:16px}
+.dev-ic{width:34px;height:34px;flex:none;fill:none;stroke:var(--red-ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* common repairs: small square thumbnails, typography stays the focus */
+.problems-img{row-gap:0}
+.problems-img li{display:grid;grid-template-columns:76px 1fr;column-gap:18px;align-items:start;padding:24px 0 30px;border-top:1px solid var(--ink)}
+.problems-img li:last-child{border-bottom:0}
+.problems-img img{width:76px;height:76px;aspect-ratio:1;border-radius:16px;object-fit:cover}
+.problems-img li:hover img{transform:scale(1.04)}
+.problems-img .pb{border:0;margin:0;padding:0;display:block}
+.problems-img .no{display:block;font-size:.875rem;font-weight:600;margin:2px 0 4px;color:var(--red-ink)}
+.problems-img h3{font-size:1.3125rem;margin-bottom:4px}
+
+@media(max-width:700px){
+ .hero{padding:calc(52px + 12px) 0 20px}
+ .hero-panel{border-radius:22px;padding:30px 22px 26px;min-height:0;align-items:flex-start}
+ .hero-panel::before{background:linear-gradient(180deg,rgba(8,8,10,.66) 0%,rgba(8,8,10,.84) 55%,rgba(8,8,10,.93) 100%)}
+ .dev-ic{width:28px;height:28px}
+ .device h3{gap:12px}
+ .problems-img li{grid-template-columns:64px 1fr;column-gap:16px;align-items:center;padding:18px 0;border-top:1px solid var(--line)}
+ .problems-img li:first-child{border-top-color:var(--ink)}
+ .problems-img li:last-child{border-bottom:1px solid var(--line)}
+ .problems-img img{width:64px;height:64px;border-radius:14px}
+ .problems-img .no{font-size:.8125rem;margin:0 0 2px}
+ .problems-img h3{font-size:1.1875rem}
+}
+picture>source{display:none}
