@@ -10,7 +10,7 @@
 <meta property="og:description" content="Phone, tablet and laptop repairs in Gore. Free diagnosis and a clear quote before any repair begins.">
 <link rel="icon" href="assets/icon-512.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/icon-512.png">
-<link rel="preload" as="image" href="assets/img3/hero-640.jpg" imagesrcset="assets/img3/hero-640.jpg 640w, assets/img3/hero-1100.jpg 1100w" imagesizes="(min-width: 900px) 540px, calc(100vw - 40px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img3/herobg-900.jpg" imagesrcset="assets/img3/herobg-900.jpg 900w, assets/img3/herobg-1600.jpg 1600w" imagesizes="100vw" fetchpriority="high">
 <link rel="stylesheet" href="style.css">
 <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__mw)document.documentElement.classList.remove('js')},3500)</script>
 </head>
@@ -38,14 +38,15 @@
 
 <!-- 1. HERO -->
 <section class="hero">
- <div class="wrap hero-grid">
+ <img class="hero-bg" src="assets/img3/herobg-1600.jpg" srcset="assets/img3/herobg-900.jpg 900w, assets/img3/herobg-1600.jpg 1600w" sizes="100vw" width="1600" height="1066" alt="A technician repairing a phone with a precision screwdriver" fetchpriority="high">
+ <div class="wrap hero-in">
   <div class="hero-text">
    <p class="eyebrow rv">Mobile World Gore</p>
    <h1 class="rv d1">Expert device repair, right here in&nbsp;Gore.</h1>
    <p class="lede rv d2">Phone, tablet and laptop repairs, with free diagnosis and a clear quote before any repair begins.</p>
    <p class="actions rv d3">
     <a class="btn" href="#visit">Get a free diagnosis</a>
-    <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=57+Main+Street,+Gore,+New+Zealand" target="_blank" rel="noopener">Get directions</a>
+    <a class="btn btn-line btn-line-light" href="https://www.google.com/maps/dir/?api=1&destination=57+Main+Street,+Gore,+New+Zealand" target="_blank" rel="noopener">Get directions</a>
    </p>
    <ul class="facts rv d4">
     <li><strong>Free diagnosis</strong><span>We find the fault before any work starts</span></li>
@@ -53,10 +54,6 @@
     <li><strong>No appointment</strong><span>Just walk in at 57 Main Street</span></li>
    </ul>
   </div>
-  <figure class="hero-fig rv d2">
-   <img src="assets/img3/hero-1100.jpg" srcset="assets/img3/hero-640.jpg 640w, assets/img3/hero-1100.jpg 1100w" sizes="(min-width: 900px) 540px, calc(100vw - 40px)" width="1100" height="733" alt="A technician repairing a phone with a precision screwdriver" fetchpriority="high">
-   <figcaption><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.2c3.7-3.9 6.2-7.3 6.2-10.4a6.2 6.2 0 0 0-12.4 0c0 3.1 2.5 6.5 6.2 10.4Z"/><circle cx="12" cy="10.6" r="2.4"/></svg>57 Main Street, Gore</figcaption>
-  </figure>
  </div>
 </section>
 
@@ -75,8 +72,11 @@
 
   <div class="simple">
    <div class="simple-head">
-    <h2 class="rv">Repairs made simple.</h2>
-    <p class="big rv d1">Bring your device in. We’ll find out what’s wrong, explain your options and give you a clear quote before any repair begins.</p>
+    <div class="simple-copy">
+     <h2 class="rv">Repairs made simple.</h2>
+     <p class="big rv d1">Bring your device in. We’ll find out what’s wrong, explain your options and give you a clear quote before any repair begins.</p>
+    </div>
+    <img class="simple-img rv d2" src="assets/img3/laptop-s-480.jpg" srcset="assets/img3/laptop-s-480.jpg 480w, assets/img3/laptop-s-800.jpg 800w" sizes="(min-width: 900px) 470px, calc(100vw - 40px)" width="800" height="533" alt="A technician repairing a laptop" loading="lazy">
    </div>
    <ul class="simple-points">
     <li class="rv"><strong>Free diagnosis</strong><span>Know what’s wrong before you decide anything.</span></li>
@@ -128,7 +128,8 @@
 
 <!-- 5. BRAND STATEMENT -->
 <section class="statement">
- <div class="wrap narrow">
+ <img class="bg-img" src="assets/img3/moodbg-1600.jpg" srcset="assets/img3/moodbg-900.jpg 900w, assets/img3/moodbg-1600.jpg 1600w" sizes="100vw" width="900" height="1350" alt="" loading="lazy">
+ <div class="wrap narrow st-in">
   <h2 class="rv">Your device is part of your <span>everyday life.</span></h2>
   <p class="big rv d1">We know how important it is to have your phone, tablet or laptop working when you need it. That’s why we keep the process simple: diagnose the problem, explain the options, and let you decide.</p>
   <p class="rv d2"><a class="more" href="#process">See how it works</a></p>
@@ -138,8 +139,13 @@
 <!-- 6. HOW IT WORKS -->
 <section class="sec sec-grey" id="process">
  <div class="wrap">
-  <p class="eyebrow rv">How it works</p>
-  <h2 class="sec-title rv d1">From broken to ready.</h2>
+  <div class="process-head">
+   <div>
+    <p class="eyebrow rv">How it works</p>
+    <h2 class="sec-title rv d1">From broken to ready.</h2>
+   </div>
+   <img class="process-img rv d2" src="assets/img3/battery-480.jpg" srcset="assets/img3/battery-480.jpg 480w, assets/img3/battery-800.jpg 800w" sizes="(min-width: 900px) 420px, calc(100vw - 40px)" width="800" height="533" alt="Hands working on a phone’s internal components" loading="lazy">
+  </div>
   <ol class="steps">
    <li class="rv"><span class="n">01</span><h3>Diagnose</h3><p>Walk in and we’ll find the fault. It’s free.</p></li>
    <li class="rv d1"><span class="n">02</span><h3>Explain</h3><p>We explain your options and provide a clear quote.</p></li>
@@ -250,7 +256,8 @@
 
 <!-- 12. FINAL CTA -->
 <section class="cta">
- <div class="wrap narrow">
+ <img class="bg-img" src="assets/img3/ctabg-1600.jpg" srcset="assets/img3/ctabg-900.jpg 900w, assets/img3/ctabg-1600.jpg 1600w" sizes="100vw" width="1600" height="1200" alt="" loading="lazy">
+ <div class="wrap narrow cta-in">
   <h2 class="rv">Need a repair?</h2>
   <p class="big rv d1">Bring your device in.<br>We’ll take a look.</p>
   <p class="cta-points rv d2">Free diagnosis. Clear quote. No appointment needed.</p>
