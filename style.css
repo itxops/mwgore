@@ -369,3 +369,19 @@ h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
  .brand-chip{min-width:0;flex:0 1 calc(50% - 22px);margin-right:0;padding:12px 14px}
  .marquee-track{gap:12px}
 }
+
+/* ---- round 2 polish ---- */
+/* repair cards: description always visible (no hover needed, works on touch + keyboard) */
+.bento{grid-auto-rows:244px}
+.tile p{max-height:none;opacity:1;overflow:visible;margin-top:2px;color:#ece7de}
+.tile::after{background:linear-gradient(180deg,rgba(10,10,10,.1) 0%,rgba(10,10,10,.9) 100%)}
+.tile:hover::after{background:linear-gradient(180deg,rgba(255,59,48,.14) 0%,rgba(10,10,10,.92) 100%)}
+.bento-cta{display:flex;align-items:center;justify-content:space-between;gap:20px 30px;flex-wrap:wrap;margin-top:28px;padding:26px 30px;border-radius:var(--r);background:var(--ink);color:#fff}
+.bento-cta p{font-family:var(--display);font-weight:700;font-size:clamp(1.15rem,2.4vw,1.5rem);letter-spacing:-.01em;margin:0}
+.soon{color:#a8a296!important;font-style:italic}
+@media(max-width:760px){
+ .bento{grid-auto-rows:auto}
+ .bento-cta{padding:22px 20px}
+ .bento-cta .btn{width:100%;justify-content:center}
+}
+.rail{scroll-padding-inline:max(4%,calc((100vw - 1200px)/2))}
