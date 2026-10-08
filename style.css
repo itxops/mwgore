@@ -235,7 +235,6 @@ h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
 .brand-chip{display:flex;align-items:center;justify-content:center;gap:12px;min-width:176px;min-height:70px;flex:none;padding:14px 26px;margin-right:16px;border-radius:18px;border:1px solid var(--line);background:#fff;font-weight:700;font-size:1.05rem;color:var(--ink);transition:transform .25s var(--ease),border-color .25s,color .25s}
 .brand-chip svg{width:22px;height:22px;fill:currentColor;opacity:.85}
 .brand-chip:hover{transform:translateY(-3px);border-color:var(--red);color:var(--red-d)}
-.brand-chip.wm svg{width:60px;height:60px;margin:-20px -6px}
 .marquee-track{animation:slide 34s linear infinite!important}
 .marquee:hover .marquee-track{animation-play-state:paused!important}
 
@@ -296,37 +295,35 @@ h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
  .to-top{right:14px;bottom:14px}
 }
 
-/* footer */
-.footer{position:relative;overflow:hidden;background:var(--ink);color:#e9e4da;padding:84px 0 28px;margin-top:40px;border-radius:44px 44px 0 0}
-.footer::before{content:"";position:absolute;width:560px;height:560px;right:-180px;top:-260px;border-radius:50%;background:radial-gradient(circle,rgba(255,59,48,.28),transparent 65%);pointer-events:none}
-.footer .wrap{position:relative}
-.f-cta{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:54px;margin-bottom:54px;border-bottom:1px solid rgba(255,255,255,.12)}
-.f-cta h2{font-size:clamp(1.9rem,4.4vw,3.2rem);color:#fff}
-.f-grid{display:grid;grid-template-columns:1.5fr .9fr 1.1fr 1.2fr;gap:44px}
-.f-logo{height:56px;width:auto;margin-bottom:20px}
-.f-brand p{color:#bdb7ac;max-width:320px;font-size:.98rem}
-.socials{display:flex;gap:12px;margin-top:24px}
-.socials a{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.2);color:#fff;transition:.3s var(--ease)}
-.socials svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.socials a:hover{background:var(--red);border-color:var(--red);transform:translateY(-4px)}
-.f-col h3{font-family:var(--body);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#ff7a70;margin-bottom:18px;font-weight:600}
-.f-col a{display:block;color:#e9e4da;padding:6px 0;font-size:.98rem;transition:color .25s,transform .25s var(--ease)}
-.f-col a:hover{color:var(--red);transform:translateX(5px)}
-.f-visit p{color:#e9e4da;font-size:.98rem;margin-bottom:14px;line-height:1.5}
-.f-visit span{display:block;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:#8f897e;margin-bottom:2px}
-.f-bottom{display:flex;justify-content:space-between;gap:12px 30px;flex-wrap:wrap;margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);color:#8f897e;font-size:.84rem}
-@media(max-width:1000px){.f-grid{grid-template-columns:1fr 1fr;gap:38px 30px}.f-brand{grid-column:span 2}}
-@media(max-width:760px){
- .footer{padding:56px 0 24px;border-radius:30px 30px 0 0}
- .f-cta{padding-bottom:36px;margin-bottom:36px}
- .f-cta .btn{width:100%;justify-content:center}
- .f-grid{gap:32px 20px}
- .f-bottom{margin-top:36px;flex-direction:column}
-}
+/* brand chips — same sizing as the Hawera site */
+.brand-chip{justify-content:center;gap:10px;min-width:160px;min-height:70px;padding:14px 26px}
+.brand-chip svg{width:22px;height:22px;margin:0;opacity:.82;flex:none}
+.brand-chip span{flex:none}
+@media(min-width:720px){.brand-chip{min-width:176px}}
 
-/* brand chips: uniform icon slot so every name lines up */
-.brand-chip{justify-content:flex-start;gap:14px;min-width:178px;padding-left:24px}
-.brand-chip svg{width:48px;height:24px;margin:0;flex:none;opacity:.88}
-.brand-chip.wm svg{width:48px;height:48px;margin:-12px 0}
-.brand-chip span{flex:1}
-@media(max-width:760px){.brand-chip{min-width:158px;padding-left:18px}.brand-chip svg{width:44px;height:22px}.brand-chip.wm svg{width:44px;height:44px;margin:-11px 0}}
+/* closing band + footer (modelled on the Hawera footer) */
+.close{padding:96px 0;text-align:center;border-top:1px solid var(--line)}
+.close h2{margin-bottom:14px}
+.close .sub{margin:0 auto 34px}
+.foot{background:var(--ink);color:rgba(255,255,255,.72);padding:64px 0 32px;margin-top:0}
+.foot-grid{display:grid;gap:44px;grid-template-columns:2fr 1fr 1fr 1.4fr}
+.foot img{width:auto;height:34px}
+.foot h2{font-family:var(--body);font-size:.84rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:14px}
+.foot p{font-size:1rem;max-width:38ch;margin-top:22px}
+.foot li a,.foot li span{display:flex;align-items:center;min-height:44px;font-size:1rem;transition:color .2s}
+.foot li a:hover{color:#fff}
+.foot-find li a,.foot-find li>span{gap:12px;align-items:flex-start}
+.f-icon{display:grid;place-items:center;flex:none;width:30px;height:30px;min-height:0;margin-top:7px;border-radius:50%;border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.78);transition:background-color .18s,border-color .18s,color .18s}
+.f-icon svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.foot-socials{display:flex;gap:14px;margin-top:22px}
+.foot-social{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.78);transition:background-color .18s,border-color .18s,color .18s}
+.foot-social svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.foot-social:hover,.foot-find li a:hover .f-icon{background:var(--red);border-color:var(--red);color:#fff}
+.foot-legal{margin-top:34px;font-size:.88rem;line-height:1.7;max-width:90ch}
+.foot-end{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);display:flex;flex-wrap:wrap;gap:6px 32px;justify-content:space-between;align-items:center;font-size:.88rem}
+.foot-end p{margin:0;max-width:none}
+.foot-end a{display:inline-block;padding-block:12px}
+.foot-end a:hover{color:#fff}
+@media(max-width:1000px){.foot-grid{grid-template-columns:1fr 1fr;gap:30px 24px}.foot-grid>:first-child,.foot-grid>:last-child{grid-column:1/-1}}
+@media(max-width:760px){.close{padding:64px 0}.foot{padding:48px 0 24px}.brand-chip{min-width:150px;padding:12px 20px}}
+.foot .f-icon{width:30px;height:30px;min-height:0;min-width:30px;padding:0;display:grid}
