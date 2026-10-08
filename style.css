@@ -433,3 +433,53 @@ picture>source{display:none}
  .device{grid-template-columns:minmax(0,1fr) 88px;column-gap:16px}
  .dev-img{width:88px;height:88px;aspect-ratio:1;border-radius:14px}
 }
+
+/* ===== Hawera-style cards for "What we repair" + "Repairs we handle every day" ===== */
+:root{--card-line:#e2e8f0;
+ --g-red:linear-gradient(135deg,#f0564c,#c9302a);--g-indigo:linear-gradient(135deg,#5a7bf0,#3547bc);
+ --g-amber:linear-gradient(135deg,#f7a63b,#dd7226);--g-teal:linear-gradient(135deg,#2db3a6,#0e8680);
+ --g-violet:linear-gradient(135deg,#9b6ae8,#6a3dbd);--g-green:linear-gradient(135deg,#43bf77,#1b8e51)}
+
+/* device cards */
+.dev-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.dev-cards li{display:flex;flex-direction:column;background:#fff;border:1px solid var(--card-line);border-radius:20px;overflow:hidden;box-shadow:0 1px 3px rgba(26,34,56,.06);transition:transform .25s var(--ease),box-shadow .25s}
+.dev-cards li:hover{transform:translateY(-4px);box-shadow:0 14px 30px -12px rgba(26,34,56,.2)}
+.dev-cards img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .6s var(--ease)}
+.dev-cards li:hover img{transform:scale(1.04)}
+.dc-body{padding:20px 22px 24px;background:#fff;position:relative}
+.dc-body h3{font-size:1.375rem;letter-spacing:-.02em;margin-bottom:6px}
+.dc-body p{color:var(--mut);font-size:1rem}
+
+/* repair cards */
+.rep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rep-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--card-line);border-radius:20px;box-shadow:0 1px 3px rgba(26,34,56,.06);overflow:hidden;transition:transform .25s var(--ease),box-shadow .25s}
+.rep-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px -12px rgba(26,34,56,.2)}
+.rep-shot{position:relative}
+.rep-shot img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:transform .6s var(--ease)}
+.rep-card:hover .rep-shot img{transform:scale(1.04)}
+.rep-tile{position:absolute;left:18px;bottom:-22px;z-index:1;display:grid;place-items:center;width:48px;height:48px;border-radius:14px;color:#fff;box-shadow:0 10px 20px -8px rgba(0,0,0,.35)}
+.rep-tile svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.rep-body{padding:36px 22px 14px;display:flex;flex-direction:column;flex:1;background:#fff;position:relative}
+.rep-body h3{font-size:1.3125rem;letter-spacing:-.02em;margin-bottom:6px}
+.rep-body p{color:var(--mut);font-size:1rem;margin-bottom:10px;flex:1}
+.rep-link{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:.9375rem;font-weight:600;color:var(--red-ink)}
+.rep-link svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s var(--ease)}
+.rep-link:hover{text-decoration:underline;text-underline-offset:3px}
+.rep-link:hover svg{transform:translateX(3px)}
+.rep-card:nth-child(6n+1) .rep-tile{background:var(--g-red)}
+.rep-card:nth-child(6n+2) .rep-tile{background:var(--g-indigo)}
+.rep-card:nth-child(6n+3) .rep-tile{background:var(--g-amber)}
+.rep-card:nth-child(6n+4) .rep-tile{background:var(--g-teal)}
+.rep-card:nth-child(6n+5) .rep-tile{background:var(--g-violet)}
+.rep-card:nth-child(6n+6) .rep-tile{background:var(--g-green)}
+
+@media(max-width:1000px){
+ .rep-grid,.dev-cards{grid-template-columns:repeat(2,1fr);gap:20px}
+}
+@media(max-width:600px){
+ .rep-grid,.dev-cards{grid-template-columns:1fr;gap:18px}
+ .dev-cards img{aspect-ratio:16/9}
+ .rep-shot img{aspect-ratio:16/9}
+ .dc-body{padding:18px 20px 20px}
+ .rep-body{padding:34px 20px 10px}
+}
