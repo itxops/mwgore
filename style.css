@@ -244,4 +244,6 @@ h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
 .brand-chip{display:flex;align-items:center;justify-content:center;gap:12px;min-width:176px;min-height:70px;flex:none;padding:14px 26px;margin-right:16px;border-radius:18px;border:1px solid var(--line);background:#fff;font-weight:700;font-size:1.05rem;color:var(--ink);transition:transform .25s var(--ease),border-color .25s,color .25s}
 .brand-chip svg{width:22px;height:22px;fill:currentColor;opacity:.85}
 .brand-chip:hover{transform:translateY(-3px);border-color:var(--red);color:var(--red-d)}
-@media(prefers-reduced-motion:reduce){.marquee{overflow-x:auto;-webkit-mask-image:none;mask-image:none}.marquee-track{animation:none!important;padding-inline:4%}.marquee-track>[data-clone]{display:none}}
+.brand-chip.wm svg{width:60px;height:60px;margin:-20px -6px}
+.marquee-track{animation:slide 34s linear infinite!important}
+.marquee:hover .marquee-track{animation-play-state:paused!important}
