@@ -78,15 +78,7 @@ h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
 .sticker b{color:var(--red)}
 .s1{left:-18px;top:30%;animation:bob 6s ease-in-out infinite}
 .s2{left:6%;bottom:6%;background:var(--red);animation:bob 7s ease-in-out infinite .8s}
-.spin{position:absolute;width:112px;height:112px;left:34%;top:-26px;animation:spin 18s linear infinite}
-.spin text{font-size:11.5px;font-weight:600;letter-spacing:2px;fill:var(--ink);font-family:var(--body)}
-.spin circle{fill:var(--red)}
 
-/* ticker */
-.ticker{background:var(--ink);color:#fff;overflow:hidden;padding:26px 0;transform:rotate(-1.2deg);margin:20px -2% 0;width:104%}
-.ticker-track{display:flex;gap:34px;width:max-content;animation:slide 38s linear infinite;align-items:center}
-.ticker span{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,3.2vw,2.6rem);letter-spacing:-.02em;white-space:nowrap}
-.ticker i{font-style:normal;color:var(--red);font-size:1.4rem}
 .fine{color:var(--muted);font-size:.82rem;margin-top:28px;text-align:center}
 
 /* bento */
@@ -203,7 +195,6 @@ h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
 @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(34,180,85,0)}100%{box-shadow:0 0 0 0 rgba(34,180,85,0)}}
 @keyframes underline{to{transform:scaleX(1)}}
 @keyframes zoom{from{transform:scale(1.15)}to{transform:scale(1)}}
-@keyframes spin{to{transform:rotate(360deg)}}
 @keyframes slide{to{transform:translateX(-50%)}}
 
 @media(max-width:1000px){
@@ -233,7 +224,7 @@ h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
  .steps,.checks{grid-template-columns:1fr}
  .mini{gap:26px}
  .s1{left:-6px}
- .spin{width:90px;height:90px;left:30%}
+
  .footer{border-radius:30px 30px 0 0}
 }
 @media(prefers-reduced-motion:reduce){
@@ -242,3 +233,15 @@ h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
  .js .reveal{opacity:1;transform:none}
  .mark::after{transform:none}
 }
+
+/* brands (chip row, from version 5) */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.brands{padding:34px 0 8px;border-block:1px solid var(--line);background:#faf7f2;margin-top:10px}
+.brands-eyebrow{display:flex;justify-content:center;margin-bottom:22px}
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.marquee-track{display:flex;flex-wrap:nowrap;width:max-content;padding-bottom:26px;animation:slide 34s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.brand-chip{display:flex;align-items:center;justify-content:center;gap:12px;min-width:176px;min-height:70px;flex:none;padding:14px 26px;margin-right:16px;border-radius:18px;border:1px solid var(--line);background:#fff;font-weight:700;font-size:1.05rem;color:var(--ink);transition:transform .25s var(--ease),border-color .25s,color .25s}
+.brand-chip svg{width:22px;height:22px;fill:currentColor;opacity:.85}
+.brand-chip:hover{transform:translateY(-3px);border-color:var(--red);color:var(--red-d)}
+@media(prefers-reduced-motion:reduce){.marquee{overflow-x:auto;-webkit-mask-image:none;mask-image:none}.marquee-track{animation:none!important;padding-inline:4%}.marquee-track>[data-clone]{display:none}}
