@@ -483,3 +483,25 @@ picture>source{display:none}
  .dc-body{padding:18px 20px 20px}
  .rep-body{padding:34px 20px 10px}
 }
+
+/* ---- hero on phones: full-width, photo clearly visible on top, roomier text ---- */
+@media(max-width:700px){
+ .hero{padding:52px 0 0;background:#0b0b0c}
+ .hero>.wrap{padding-inline:0}
+ .hero-panel{display:block;min-height:0;border-radius:0;padding:0 24px 44px;background:#0b0b0c}
+ .hero-bg{inset:0 0 auto 0;height:300px;object-position:64% 58%}
+ .hero-panel::before{background:linear-gradient(180deg,rgba(11,11,12,0) 0%,rgba(11,11,12,.15) 90px,rgba(11,11,12,.75) 210px,#0b0b0c 300px)}
+ .hero-text{padding-top:196px;max-width:none}
+ .hero .eyebrow{margin-bottom:12px}
+ .hero h1{font-size:clamp(2.15rem,9.6vw,2.75rem);line-height:1.06;margin-bottom:16px}
+ .hero .lede{font-size:1.125rem;line-height:1.45}
+ .hero .actions{margin-top:28px;gap:12px}
+ .hero .facts{margin-top:32px;padding-top:24px;gap:18px}
+}
+@media(max-width:360px){
+ .hero-panel{padding:0 20px 40px}
+ .hero-bg{height:270px}
+ .hero-text{padding-top:176px}
+}
+@media(max-width:700px){.hero-bg{object-position:62% 72%}}
+@media(max-width:360px){.hero-panel::before{background:linear-gradient(180deg,rgba(11,11,12,0) 0%,rgba(11,11,12,.15) 80px,rgba(11,11,12,.78) 190px,#0b0b0c 268px)}}
